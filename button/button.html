@@ -1,0 +1,32 @@
+<!--
+Reusable WeWeb Button (plain HTML)
+
+How to use:
+- Add the stylesheet: <link rel="stylesheet" href="/button/button.css">
+- Add the script: <script src="/button/button.js"></script>
+
+Markup examples:
+- Primary: <button class="ww-btn ww-btn--primary" data-action="myAction">Save</button>
+- Secondary: <button class="ww-btn ww-btn--secondary" data-action="cancelAction">Cancel</button>
+
+Behavior:
+- `data-action` can be the name of a global function (it will be called with the button element)
+- or any string: a `ww-button-click` CustomEvent will be dispatched on `document` with
+	detail `{ action, element }` so you can listen for it in WeWeb or your page code.
+-->
+
+<div class="ww-button-examples">
+	<button class="ww-btn ww-btn--primary" data-action="myAction">Primary Button</button>
+	<button class="ww-btn ww-btn--secondary" data-action="cancelAction">Secondary Button</button>
+</div>
+
+<!-- Demo handlers (optional). In WeWeb you can remove these and wire your own actions. -->
+<script>
+function myAction(el){
+	alert('Primary clicked: ' + (el ? el.textContent : ''));
+}
+function cancelAction(el){
+	alert('Secondary clicked: ' + (el ? el.textContent : ''));
+}
+</script>
+

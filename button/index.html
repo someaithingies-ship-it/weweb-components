@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="button/button.css">
+</head>
+<body>
+  <button class="ww-btn ww-btn--primary" data-action="myAction">Save</button>
+
+  <script src="button/button.js"></script>
+  <script>
+    // Example global function for the data-action attribute
+    function myAction(el) {
+      alert("Button clicked! Element text: " + el.textContent);
+    }
+
+    // Example listener for generic CustomEvent
+    document.addEventListener("ww-button-click", e => {
+      console.log("CustomEvent triggered:", e.detail);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* WeWeb reusable button styles (plain CSS)
+	 - Base class: .ww-btn
+	 - Modifiers: .ww-btn--primary, .ww-btn--secondary
+*/
+
+.ww-btn{
+	-webkit-font-smoothing:antialiased;
+	font-family: inherit;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	line-height: 1;
+	border-radius: 6px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: background-color 120ms ease, box-shadow 120ms ease, transform 120ms ease;
+	user-select: none;
+}
+
+.ww-btn:focus{
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(0,123,255,0.18);
+}
+
+.ww-btn:active{
+	transform: translateY(1px);
+}
+
+.ww-btn[disabled]{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.ww-btn--primary{
+	background-color: #007bff;
+	color: #fff;
+	border-color: #007bff;
+}
+.ww-btn--primary:hover{ background-color:#006ae6 }
+
+.ww-btn--secondary{
+	background-color: transparent;
+	color: #333;
+	border-color: #d0d7de;
+	border-width: 1px;
+}
+.ww-btn--secondary:hover{ background-color: rgba(0,0,0,0.04) }
+
+/* Example wrapper spacing */
+.ww-button-examples > .ww-btn{ margin-right: 0.75rem }
+
